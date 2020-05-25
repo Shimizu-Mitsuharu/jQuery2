@@ -10,8 +10,7 @@ var js_hand = getJShand();
 // ユーザの手とJavaScriptのじゃんけんの手を比べる関数を呼び出し、結果をjudgeに入れる
 var judge = winLose(user_hand, js_hand);
     if (user_hand != null) {
-        alert('あなたの選んだ手は' + user_hand + 'です。\nJavaScriptの選んだ手は' + js_hand + 'です。
-        \n結果は' + judge + 'です。');
+        alert('あなたの選んだ手は' + user_hand + 'です。\nJavaScriptの選んだ手は' + js_hand + 'です。\n結果は' + judge + 'です。');
     } else {
         alert("またチャレンジしてね")
     }
@@ -22,7 +21,7 @@ alert('あなたの選んだ手は' + user_hand + 'です。\nJavaScriptの選�
 function getJShand(){
     var js_hand_num = Math.floor( Math.random() * 3 );
     var hand_name;
-    
+
     if(js_hand_num == 0){
         hand_name = "グー";
     }else if(js_hand_num == 1){
@@ -30,14 +29,14 @@ function getJShand(){
     }else if(js_hand_num == 2){
         hand_name = "パー";
     }
-    
+
     return hand_name;
 }
 
 // ユーザの手とJavaScriptのじゃんけんの手を比べる関数
 function winLose(user, js){
     var winLoseStr;
-    
+
     if(user == "グー"){
         if(js == "グー"){
             winLoseStr = "あいこ";
@@ -63,6 +62,6 @@ function winLose(user, js){
             winLoseStr = "あいこ";
         }
     }
-    
+
     return winLoseStr;
 }
